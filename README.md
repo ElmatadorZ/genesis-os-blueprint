@@ -9,8 +9,10 @@
 > can read in an afternoon and adapt to your own stack.
 
 <p>
-  <img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-blue">
-  <img alt="Status" src="https://img.shields.io/badge/status-reference%20blueprint-green">
+  <a href="https://github.com/ElmatadorZ/genesis-os-blueprint/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/ElmatadorZ/genesis-os-blueprint/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-blue"></a>
+  <img alt="Python" src="https://img.shields.io/badge/python-3.9%2B-blue">
+  <img alt="Dependencies" src="https://img.shields.io/badge/dependencies-none-brightgreen">
   <img alt="ABI" src="https://img.shields.io/badge/Kernel%20ABI-v0.2-purple">
 </p>
 

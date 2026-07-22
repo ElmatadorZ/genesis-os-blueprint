@@ -14,7 +14,9 @@ keywords = ["agents", "cognitive-architecture", "governance", "ai-safety", "mult
 dependencies = []   # standard library only — by design
 
 [project.urls]
-Homepage = "https://github.com/"   # set to your repo after publishing
+Homepage = "https://github.com/ElmatadorZ/genesis-os-blueprint"
+Repository = "https://github.com/ElmatadorZ/genesis-os-blueprint"
+Issues = "https://github.com/ElmatadorZ/genesis-os-blueprint/issues"
 
 [tool.setuptools]
 packages = ["genesis_kernel", "genesis_kernel.subsystems"]
