@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>social-preview</title>
+<style>html,body{margin:0;background:#0a0e14}</style>
+</head>
+<body>
+<svg id="art" width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg"
+     font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1018"/>
+      <stop offset="1" stop-color="#0e1826"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1280" height="640" fill="none" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- header -->
+  <text x="64" y="104" font-size="66" font-weight="700" fill="url(#title)" letter-spacing="1">GENESIS OS</text>
+  <text x="67" y="150" font-size="29" fill="#94a3b8">Cognitive Agent Architecture Blueprint</text>
+  <text x="67" y="192" font-size="22" font-style="italic" fill="#a5b4fc">“Capability must never outrun accountability.”</text>
+
+  <!-- 7 layers -->
+  <!-- row template: rect + accent bar + name + right descriptor -->
+  <g font-size="21">
+    <!-- 1 -->
+    <rect x="64" y="228" width="1152" height="44" rx="8" fill="#111a28"/>
+    <rect x="64" y="228" width="6" height="44" rx="3" fill="#2dd4bf"/>
+    <text x="92" y="256" font-weight="600" fill="#f1f5f9">Interface · Apps</text>
+    <text x="1200" y="256" text-anchor="end" fill="#64748b">user-facing surfaces</text>
+    <!-- 2 -->
+    <rect x="64" y="280" width="1152" height="44" rx="8" fill="#111a28"/>
+    <rect x="64" y="280" width="6" height="44" rx="3" fill="#4ade80"/>
+    <text x="92" y="308" font-weight="600" fill="#f1f5f9">OS Core · Genesis OS</text>
+    <text x="1200" y="308" text-anchor="end" fill="#64748b">IPC bus · permissions/audit · services</text>
+    <!-- 3 -->
+    <rect x="64" y="332" width="1152" height="44" rx="8" fill="#131c2e"/>
+    <rect x="64" y="332" width="6" height="44" rx="3" fill="#818cf8"/>
+    <text x="92" y="360" font-weight="600" fill="#f1f5f9">Cognitive Kernel · ABI v0.2</text>
+    <text x="1200" y="360" text-anchor="end" fill="#64748b">9 services · the cognitive quality gate</text>
+    <!-- 4 -->
+    <rect x="64" y="384" width="1152" height="44" rx="8" fill="#1c1a12"/>
+    <rect x="64" y="384" width="6" height="44" rx="3" fill="#fbbf24"/>
+    <text x="92" y="412" font-weight="600" fill="#f1f5f9">Policy Hook Surface</text>
+    <text x="1200" y="412" text-anchor="end" fill="#64748b">PRE_PLAN → PRE_RESPONSE · fail-closed</text>
+    <!-- 5 -->
+    <rect x="64" y="436" width="1152" height="44" rx="8" fill="#111a28"/>
+    <rect x="64" y="436" width="6" height="44" rx="3" fill="#38bdf8"/>
+    <text x="92" y="464" font-weight="600" fill="#f1f5f9">Cognitive Subsystems</text>
+    <text x="1200" y="464" text-anchor="end" fill="#64748b">memory · planning · validation · execution · governance</text>
+    <!-- 6 -->
+    <rect x="64" y="488" width="1152" height="44" rx="8" fill="#111a28"/>
+    <rect x="64" y="488" width="6" height="44" rx="3" fill="#94a3b8"/>
+    <text x="92" y="516" font-weight="600" fill="#f1f5f9">Runtime Kernel</text>
+    <text x="1200" y="516" text-anchor="end" fill="#64748b">drivers · model pools · sessions</text>
+    <!-- 7 -->
+    <rect x="64" y="540" width="1152" height="44" rx="8" fill="#111a28"/>
+    <rect x="64" y="540" width="6" height="44" rx="3" fill="#fb7185"/>
+    <text x="92" y="568" font-weight="600" fill="#f1f5f9">Runtimes · Hardware</text>
+    <text x="1200" y="568" text-anchor="end" fill="#64748b">local LLMs · execution sandbox</text>
+  </g>
+
+  <!-- footer -->
+  <text x="64" y="612" font-size="18" fill="#475569"
+        font-family="Consolas, monospace">Apache-2.0   ·   runnable reference   ·   zero dependencies   ·   github.com/ElmatadorZ/genesis-os-blueprint</text>
+</svg>
+
+<script>
+window.addEventListener('load', function () {
+  try {
+    var svg = document.getElementById('art');
+    var xml = new XMLSerializer().serializeToString(svg);
+    var b64 = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(xml)));
+    var img = new Image();
+    img.onload = function () {
+      var c = document.createElement('canvas');
+      c.width = 1280; c.height = 640;
+      var ctx = c.getContext('2d');
+      ctx.drawImage(img, 0, 0, 1280, 640);
+      window.__png = c.toDataURL('image/png');
+      window.__ready = true;
+      document.title = 'READY';
+    };
+    img.onerror = function () { window.__err = 'image load error'; window.__ready = true; };
+    img.src = b64;
+  } catch (e) { window.__err = String(e); window.__ready = true; }
+});
+</script>
+</body>
+</html>
