@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genesis-kernel"
+version = "0.2.0"
+description = "Runnable reference for the Genesis OS Cognitive Agent Architecture Blueprint"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ElmatadorZ (Genesis Mind)" }]
+keywords = ["agents", "cognitive-architecture", "governance", "ai-safety", "multi-agent"]
+dependencies = []   # standard library only — by design
+
+[project.urls]
+Homepage = "https://github.com/"   # set to your repo after publishing
+
+[tool.setuptools]
+packages = ["genesis_kernel", "genesis_kernel.subsystems"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,20 @@
+Genesis OS — Cognitive Agent Architecture Blueprint
+Copyright 2026 ElmatadorZ (Genesis Mind)
+
+This product includes software and architecture documentation developed as part
+of the Genesis Mind / SkynetClaw project.
+
+Licensed under the Apache License, Version 2.0. See the LICENSE file.
+
+--------------------------------------------------------------------------------
+Attribution
+--------------------------------------------------------------------------------
+The architecture described here — the Cognitive Kernel ABI, the Policy Hook
+Surface, the Capability Provider model, and the Reality Grading Loop — was
+co-designed in a human + AI partnership. The disciplines it encodes (honesty
+over appearance, corrigibility, restraint, governance that binds its makers, and
+auditable memory) are released here so that others may build agent systems whose
+capability never outruns their accountability.
+
+If you set a legal copyright holder for your fork, replace "ElmatadorZ (Genesis
+Mind)" above and in the LICENSE appendix with your name or entity.
